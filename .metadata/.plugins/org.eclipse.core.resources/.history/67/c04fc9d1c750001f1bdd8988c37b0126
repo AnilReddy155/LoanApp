@@ -1,0 +1,40 @@
+package com.cg.entity;
+
+import java.sql.Timestamp;
+import java.util.UUID;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "loan_approval", schema = "admin_db")
+public class LoanApproval {
+
+    @Id
+    @Column(name = "id", nullable = false)
+    private Long id; // Primary Key
+
+    @Column(name = "loan_request_id", nullable = false)
+    private UUID loanRequestId; // Foreign Key referencing LoanRequest(id)
+
+    @Column(name = "admin_id", nullable = false)
+    private UUID adminId;
+
+    @Column(name = "status", nullable = false)
+    private String status; // e.g., PENDING, APPROVED, REJECTED
+
+    @Column(name = "validation_status", nullable = false)
+    private String validationStatus; // e.g., SUCCESS, FAILURE
+
+    @Column(name = "remarks")
+    private String remarks;
+
+    @Column(name = "created_at", nullable = false)
+    private Timestamp createdAt;
+
+    @Column(name = "updated_at", nullable = false)
+    private Timestamp updatedAt;
+
+}

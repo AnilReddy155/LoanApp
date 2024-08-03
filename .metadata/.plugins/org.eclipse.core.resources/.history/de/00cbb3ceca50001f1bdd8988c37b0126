@@ -1,0 +1,15 @@
+package com.cg.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.cg.repo.LoanRequestRepository;
+
+@Service
+public class LoanRequestService {
+
+    @Autowired
+    private LoanRequestRepository loanRequestRepository;
+
+    // Implement service methods
+}
