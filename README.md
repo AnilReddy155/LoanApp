@@ -8,6 +8,9 @@ To Start Application for need to run a kafka.
     `C:\kafka>bin\windows\kafka-server-start.bat config\server-0.properties` 
 4. make sure to verify the `server-0.properties` peresent and it is refering correct zookeeper.       
 
+
+
+
 # CUSTOMER MICROSERVICE
 
 Create DB Schemas
@@ -32,7 +35,7 @@ CREATE SEQUENCE IF NOT EXISTS loan_cust_db.load_sequence
 
 
 
-#ADMIN MICROSERVICE
+# ADMIN MICROSERVICE
 
 Create DB Schemas
 
@@ -60,3 +63,4 @@ CREATE SEQUENCE IF NOT EXISTS admin_db.report_sequence
     MINVALUE 1
     MAXVALUE 9223372036854775807
     CACHE 1;	
+
